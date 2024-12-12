@@ -30,7 +30,48 @@ def draw_background():
 #Function for drawing panel
 def draw_panel():
     screen.blit(panel_img, (0, screen_height - bottom_panel1))
-    
+
+
+#Knight Class
+class Knight():
+    def __init__(self, x, y, name, max_hp, str, int, dex, potions):
+         self.name = name
+         self.max_hp = max_hp
+         self.hp = max_hp
+         self.atk = str
+         self.start_potions = potions
+         self.alive = True
+         #self.image = pygame.image.load("img/Classes/Knight/Idle/____.png")
+         #self.rect = self.image.get_rect()
+         self.rect.center = (x, y)
+
+
+class Mage():
+    def __init__(self, x, y, name, max_hp, str, int, dex, potions):
+        self.name = name
+        self.max_hp = max_hp
+        self.hp = max_hp
+        self.atk = int
+        self.start_potions = potions
+        self.alive = True
+        #self.image = pygame.image.load("img/Classes/Mage/Idle/____.png")
+        #self.rect = self.image.get_rect()
+        self.rect.center = (x, y)
+
+class Archer():
+    def __init__(self, x, y, name, max_hp, str, int, dex, potions):
+        self.name = name
+        self.max_hp = max_hp
+        self.hp = max_hp
+        self.atk = dex
+        self.start_potions = potions
+        self.alive = True
+        #self.image = pygame.image.load("img/Classes/Mage/Idle/____.png")
+        #self.rect = self.image.get_rect()
+        self.rect.center = (x, y)
+        
+        
+        
 run = True
 while run:
 
