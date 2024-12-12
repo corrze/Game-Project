@@ -35,7 +35,8 @@ def draw_background():
 #Function for drawing panel
 def draw_panel():
     screen.blit(panel_img, (0, screen_height - bottom_panel1))
-    
+
+
 #Knight Class
 class Knight():
     def __init__(self, x, y, name, max_hp, str, int, dex, potions):
