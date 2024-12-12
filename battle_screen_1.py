@@ -1,4 +1,12 @@
 import pygame
+import tkinter as tk
+
+root = tk.Tk()
+user_screen_width = root.winfo_screenwidth()
+user_screen_height = root.winfo_screenheight()
+
+clock = pygame.time.Clock()
+fps = 60
 
 clock = pygame.time.Clock()
 fps = 60
@@ -6,11 +14,11 @@ fps = 60
 pygame.init()
 
 #window for game
-bottom_panel1 = 300
-screen_width = 1600
-screen_height = 700 + bottom_panel1
+bottom_panel1 = (user_screen_height * 0.3)
+screen_width = (user_screen_width * 0.8)
+screen_height = (user_screen_height * 0.8) + bottom_panel1
 
-screen = pygame.display.set_mode((screen_width, screen_height))
+screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE)
 pygame.display.set_caption('Battle 1')
 
 
