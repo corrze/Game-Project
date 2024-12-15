@@ -49,7 +49,7 @@ class Knight():
          self.atk = str
          self.start_potions = potions
          self.alive = True
-         #self.image = pygame.image.load("img/Classes/Knight/Idle/____.png")
+         self.image = pygame.image.load(f"img/Classes/{self.name}/Placeholderbear1.png")
          #self.rect = self.image.get_rect()
          self.rect.center = (x, y)
 
@@ -62,8 +62,8 @@ class Mage():
         self.atk = int
         self.start_potions = potions
         self.alive = True
-        #self.image = pygame.image.load("img/Classes/Mage/Idle/____.png")
-        #self.rect = self.image.get_rect()
+        self.image = pygame.image.load(f"img/Classes/{self.name}/Placeholderbear1.png")
+        self.rect = self.image.get_rect()
         self.rect.center = (x, y)
 
 class Archer():
@@ -74,12 +74,15 @@ class Archer():
         self.atk = dex
         self.start_potions = potions
         self.alive = True
-        #self.image = pygame.image.load("img/Classes/Mage/Idle/____.png")
-        #self.rect = self.image.get_rect()
+        self.image = pygame.image.load(f"img/Classes/{self.name}/Placeholderbear1.png")
+        self.rect = self.image.get_rect()
         self.rect.center = (x, y)
         
+    def draw(self):
+        screen.blit(self.image, self.rect)
         
-        
+knight = Knight(200, 260, 'Knight', 30, 10, 0, 0, 3)
+
 run = True
 while run:
 
@@ -90,6 +93,9 @@ while run:
     
     #Draw Panel
     draw_panel()
+    
+    #draw knight
+    knight.draw()
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
