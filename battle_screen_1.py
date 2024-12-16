@@ -49,7 +49,7 @@ class Knight():
          self.atk = str
          self.start_potions = potions
          self.alive = True
-         img = pygame.image.load(f"img/Classes/{self.name}/_idle_1.jpg")
+         img = pygame.image.load(f"img/Classes/{self.name}/_Idle_1.png")
          self.image = pygame.transform.scale(img, (img.get_width() / 3, img.get_height() / 3))
          self.rect = self.image.get_rect()
          self.rect.center = (x, y)
@@ -82,7 +82,7 @@ class Archer():
         self.atk = dex
         self.start_potions = potions
         self.alive = True
-        img = pygame.image.load(f"img/Classes/{self.name}/Archer-Idle-spritesheet_1.jpg")
+        img = pygame.image.load(f"img/Classes/{self.name}/Archer-Idle-spritesheet_1.png")
         self.image = pygame.transform.scale(img, (img.get_width() / 3, img.get_height() / 3))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
