@@ -90,9 +90,9 @@ class Archer():
     def draw(self):
         screen.blit(self.image, self.rect)
         
-knight = Knight(200, 260, 'Knight', 30, 10, 3)
-mage = Mage(550, 270, 'mage', 30, 10, 3)
-archer = Archer(270, 270, 'archer', 30, 10, 3)
+knight = Knight(200, 610, 'Knight', 30, 10, 3)
+mage = Mage(550, 670, 'mage', 30, 10, 3)
+archer = Archer(270, 670, 'archer', 30, 10, 3)
 
 hero_list = []
 hero_list.append(knight)
