@@ -66,7 +66,7 @@ class Mage():
         self.atk = int
         self.start_potions = potions
         self.alive = True
-        img = pygame.image.load(f"img/Classes/{self.name}/Placeholderbear1.jpg")
+        img = pygame.image.load(f"img/Classes/{self.name}/RingTailPlaceHolder.png")
         self.image = pygame.transform.scale(img, (img.get_width() / 6, img.get_height() / 6))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
@@ -91,13 +91,22 @@ class Archer():
         screen.blit(self.image, self.rect)
         
 knight = Knight(200, 610, 'Knight', 30, 10, 3)
-mage = Mage(550, 670, 'mage', 30, 10, 3)
+#mage = Mage(550, 670, 'mage', 30, 10, 3)
 archer = Archer(270, 670, 'archer', 30, 10, 3)
+sentret = Mage(570, 670, 'mage', 30, 10, 3)
+ringTail = Mage(590, 670, 'mage', 30, 10, 3)
+
+#List of Heros
 
 hero_list = []
 hero_list.append(knight)
-hero_list.append(mage)
+#hero_list.append(mage)
 hero_list.append(archer)
+
+#List of Enemies
+enemy_list = []
+enemy_list.append(sentret)
+enemy_list.append(ringTail)
 
 run = True
 while run:
