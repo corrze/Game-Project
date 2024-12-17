@@ -93,8 +93,8 @@ class Archer():
 knight = Knight(200, 610, 'Knight', 30, 10, 3)
 #mage = Mage(550, 670, 'mage', 30, 10, 3)
 archer = Archer(270, 670, 'archer', 30, 10, 3)
-sentret = Mage(570, 670, 'mage', 30, 10, 3)
-ringTail = Mage(590, 670, 'mage', 30, 10, 3)
+sentret = Mage(440, 690, 'mage', 30, 10, 3)
+ringTail = Mage(540, 690, 'mage', 30, 10, 3)
 
 #List of Heros
 
@@ -123,6 +123,10 @@ while run:
     for hero in hero_list:
         hero.draw()
     
+    for enemy in enemy_list:
+        enemy.draw()
+        
+        
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
